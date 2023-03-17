@@ -21,7 +21,7 @@ public class Restaurante {
             Hamburguer Food = new Hamburguer();
             Food.nome = nome;
             Food.valor = valor;
-            double valotTotal = Food.CalcularValor(Food.seEAtesanal);
+            double valotTotal = Food.CalcularValor(artesanalParaCalculo);
 
             JOptionPane.showMessageDialog(null, "Pedido" + valotTotal, "pedido", JOptionPane.INFORMATION_MESSAGE);
 
@@ -32,7 +32,7 @@ public class Restaurante {
                 String valorBorda = JOptionPane.showInputDialog("A pizza vai ter borda recheada? \n Sim, \n Não");
                 boolean bordaParaCalculo;
 
-                if (valorArtesanal.equals("Sim")) {
+                if (valorBorda.equals("Sim")) {
                     bordaParaCalculo = true;
                 } else {
                     bordaParaCalculo = false;
@@ -40,7 +40,7 @@ public class Restaurante {
                 Pizza boa = new Pizza();
                 boa.nome = nome;
                 boa.valor = valor;
-                double valotTotal2 = boa.CalcularValor(boa.possuiBorda);
+                double valortTotal2 = boa.CalcularValor(bordaParaCalculo);
 
                 JOptionPane.showMessageDialog(null, "Pedido" + valotTotal, "pedido", JOptionPane.INFORMATION_MESSAGE);
 
